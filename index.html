@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Station</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Station</h1>
+            <p class="subtitle">Your simple companion for tracking time</p>
+        </header>
+        
+        <main class="station-grid">
+            <section class="card">
+                <h2>Digital Clock</h2>
+                <div class="clock-container">
+                    <div id="clock-display" class="time-display monospace">12:00:00 PM</div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Stopwatch</h2>
+                <div class="stopwatch-container">
+                    <div id="stopwatch-display" class="time-display monospace">00:00:00</div>
+                    <div class="button-group">
+                        <button id="stopwatch-start" class="btn btn-start">Start</button>
+                        <button id="stopwatch-pause" class="btn btn-pause">Pause</button>
+                        <button id="stopwatch-reset" class="btn btn-reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Countdown Timer</h2>
+                <div class="timer-container">
+                    <div id="timer-display" class="time-display monospace">00:00:00</div>
+                    <div id="timer-message" class="timer-status hidden">Time's Up!</div>
+                    <div class="timer-controls">
+                        <input type="number" id="timer-input" placeholder="Enter seconds" min="1" step="1">
+                        <div class="button-group">
+                            <button id="timer-start" class="btn btn-start">Start</button>
+                            <button id="timer-pause" class="btn btn-pause">Pause</button>
+                            <button id="timer-reset" class="btn btn-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

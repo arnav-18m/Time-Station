@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.station-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 280px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.clock-container,
+.stopwatch-container,
+.timer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.time-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #f8fafc;
+    font-variant-numeric: tabular-nums;
+}
+
+.monospace {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.15s ease;
+    flex: 1;
+    max-width: 100px;
+}
+
+.btn-start {
+    background-color: #10b981;
+}
+
+.btn-start:hover {
+    background-color: #059669;
+}
+
+.btn-pause {
+    background-color: #f59e0b;
+}
+
+.btn-pause:hover {
+    background-color: #d97706;
+}
+
+.btn-reset {
+    background-color: #ef4444;
+}
+
+.btn-reset:hover {
+    background-color: #dc2626;
+}
+
+.timer-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #3b82f6;
+}
+
+.timer-status {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ef4444;
+    margin-bottom: 20px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .station-grid {
+        grid-template-columns: 1fr;
+    }
+}
